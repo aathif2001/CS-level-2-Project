@@ -14,6 +14,7 @@
         <div class="menu">
             <a href="home.php">Home</a><br>
             <a href="products.php">Products</a><br>
+            <a href="help.php">h</a><br>
             <a href="logout.php">logout</a>
         </div>
     </body>
