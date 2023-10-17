@@ -32,7 +32,8 @@
                         // store user details in a session
                         $_SESSION['username'] = $formUsername;
                         $_SESSION['name'] = $row['name'];
-    
+                        // username should came here 
+
                         // if checkbox checked save username and password in cookies
                         if(isset($_GET["check"])){
                             setCookie('username', $formUsername);

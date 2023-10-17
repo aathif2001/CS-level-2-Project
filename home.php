@@ -9,7 +9,6 @@
             This is HOME page.
         </h1>
         <h1>products</h1>
-        <h1></h1>
         
     </body>
 </html>

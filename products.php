@@ -10,8 +10,11 @@
         session_start();
         
         if (isset($_SESSION["username"])) {
-            echo "<h1>This is product page.</h1><br>";
-            echo "This page contains product list";
+    ?>
+
+                <!-- procuct code her  -->
+            <h1>product</h1>
+    <?php
         } else {
             echo "<script>location.href='login.php'</script>";
         }
