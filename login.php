@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Log in</title>
     <style>
-        .menu {
-            text-align: center;
-            margin: auto;
-            width: 300px;
-            border: 1px solid black;
-            padding: 20px;
-        }
         form {
             margin: auto;
             margin-top: 50px;
@@ -21,11 +14,7 @@
     </style>
 </head>
 <body>
-    <div class="menu">
-        <a href="home.php">Home</a><br>
-        <a href="products.php">Products</a><br>
-        <a href="logout.php">logout</a>
-    </div>
+    <?php include 'menu.php' ?>
     <form action="server.php" method="get">
         <label for="name">Name : </label>
         <input type="text" name="name" value=<?php if(isset($_COOKIE['username'])) echo $_COOKIE['username'] ?>>
