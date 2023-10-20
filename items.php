@@ -4,7 +4,7 @@
     <head>
         <style>
             .card {
-                border: 1ps solid black;
+                border: 1px solid black;
                 border-radius: 10px;
                 padding: 10px;
                 margin: 10px;
@@ -32,7 +32,9 @@
                     // retrieve name from database 
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
                     // retrieve price fro database
-                    echo "<span id='price'>LKR ".$row['price']."</span><br>";
+                    echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
+
+                    // if($_SESSION["username"] == )
                     echo "<button>Add to Cart</button><button>edit</button><button>delete</button></div>";
                 }
             } 
