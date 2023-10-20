@@ -33,9 +33,13 @@
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
                     // retrieve price fro database
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
+                    echo "<button>Add to Cart</button>";
+                    
+                    if($_SESSION["username"] == "admin"){
 
-                    // if($_SESSION["username"] == )
-                    echo "<button>Add to Cart</button><button>edit</button><button>delete</button></div>";
+                        echo "<button>edit</button><button>delete</button>";
+                    }
+                    echo "</div>";
                 }
             } 
         ?>
