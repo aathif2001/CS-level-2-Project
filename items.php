@@ -22,6 +22,7 @@
     </head>
     <body>
         <?php 
+
             $sql = "SELECT product_name, price FROM products";
             $result = $conn->query($sql); 
 
@@ -35,9 +36,8 @@
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
                     echo "<button>Add to Cart</button>";
                     
-                    if($_SESSION["username"] == "admin"){
-
-                        echo "<button>edit</button><button>delete</button>";
+                    if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
+                        echo "user type";
                     }
                     echo "</div>";
                 }

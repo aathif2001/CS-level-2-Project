@@ -14,7 +14,7 @@
 
             include("conn.php");
             
-            $sql = "SELECT id, name, username, password FROM users";
+            $sql = "SELECT id, name, username, password, user_type FROM users";
             $result = $conn->query($sql); 
             
             session_start();
@@ -32,7 +32,7 @@
                         // store user details in a session
                         $_SESSION['username'] = $formUsername;
                         $_SESSION['name'] = $row['name'];
-                        // username should came here 
+                        $_SESSION['usertype'] = $row['user_type'];
 
                         // if checkbox checked save username and password in cookies
                         if(isset($_GET["check"])){

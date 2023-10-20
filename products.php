@@ -7,8 +7,6 @@
     <?php
         include 'menu.php';
 
-        session_start();
-        
         if (isset($_SESSION["username"])) {
             include 'items.php';
         } else {
