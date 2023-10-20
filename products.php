@@ -10,11 +10,7 @@
         session_start();
         
         if (isset($_SESSION["username"])) {
-    ?>
-
-                <!-- procuct code her  -->
-            <h1>product</h1>
-    <?php
+            include 'items.php';
         } else {
             echo "<script>location.href='login.php'</script>";
         }
