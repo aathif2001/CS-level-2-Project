@@ -36,7 +36,6 @@
         </form>
         
         <?php 
-            // $items = array();
             if(isset($_POST['search'])){
                 $searchKey = $_POST['search'];
                 $sql = "SELECT product_name, price, in_stock FROM products WHERE product_name LIKE '%".$_POST['search']."%'";
@@ -48,17 +47,18 @@
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    // $items[]
                     echo "<div class='card'>";
                     echo "<img src='' alt='item_img'><br>";
                     // retrieve name from database 
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
-                    // retrieve price fro database
+                    // retrieve price from database
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
-                    echo "<button>Add to Cart</button>";
+                    echo "<button onclick='addToCart()'>Add to Cart</button>";
                     
+                    // Authorization - only admin could be edit or delete 
                     if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
-                        echo "user type";
+                        echo "<button>Edit</button>";
+                        echo "<button>Delete</button>";
                     }
                     echo "</div>";
                 }
@@ -67,7 +67,21 @@
             }
         ?>
 
-        <!-- <div class="card">
+        <script>
+            function editItem(product_id){
+                location.href='edit.php';
+            } 
+            function deleteItem(product_id){
+                location.href='delete.php';
+            }  
+            function addToCart(){
+                location.href='cart.php';
+            }
+        </script>
+    </body>
+</html>
+
+<!-- <div class="card">
             <img src="#" alt="item_img"><br>
             <span id="item_name"></span>
             <span id="item_name"></span>
@@ -75,5 +89,3 @@
             <button>edit</button>
             <button>delete</button>
         </div> -->
-    </body>
-</html>
