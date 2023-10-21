@@ -38,7 +38,7 @@
         <?php 
             if(isset($_POST['search'])){
                 $searchKey = $_POST['search'];
-                $sql = "SELECT product_name, price, in_stock FROM products WHERE product_name LIKE '%".$_POST['search']."%'";
+                $sql = "SELECT product_id, product_name, price, in_stock FROM products WHERE product_name LIKE '%".$_POST['search']."%'";
             } else {
                 $sql = "SELECT product_name, price, in_stock FROM products";
             }
@@ -57,7 +57,10 @@
                     
                     // Authorization - only admin could be edit or delete 
                     if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
-                        echo "<button>Edit</button>";
+                        global $P_id;
+                        if (isset($row['product_id'])) $P_id = $row['product_id'];
+                        echo $P_id;
+                        echo "<button onclick=editItem(".$P_id.")>Edit</button>";
                         echo "<button>Delete</button>";
                     }
                     echo "</div>";
@@ -69,7 +72,8 @@
 
         <script>
             function editItem(product_id){
-                location.href='edit.php';
+                var url = 'edit.php?id='+ product_id
+                location.href= url;
             } 
             function deleteItem(product_id){
                 location.href='delete.php';
