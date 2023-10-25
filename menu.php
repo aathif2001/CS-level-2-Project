@@ -19,7 +19,7 @@
             <a href="help.php">help</a><br>
             <?php
                 if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
-                    echo "<a href='admin.php'>Dashboard</a><br>";
+                    echo "<a href='admin'>Dashboard</a><br>";
                 }
             ?>
             <a href="logout.php">logout</a>

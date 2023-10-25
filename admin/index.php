@@ -1,31 +1,28 @@
-<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Dashboard | By Code Info</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome Cdn Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-</head>
+<?php include '../conn.php'; ?>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  </head>
 <body>
   <div class="container">
     <nav>
       <ul>
-        <li><a href="#" class="logo">
-          <img src="/logo.jpg" alt="">
+        <li><a href="../home.php" class="logo">
+          <img src="../images/logo1.jpg" alt="">
           <span class="nav-item">E-store</span>
         </a></li>
-        <li><a href="#">
+        <li><a href="../home.php">
           <i class="fas fa-home"></i>
           <span class="nav-item">Home</span>
         </a></li>
         <li><a href="">
           <i class="fas fa-user"></i>
-          <span class="nav-item">Profile</span>
-        </a></li>
-        <li><a href="">
-          <i class="fas fa-wallet"></i>
-          <span class="nav-item">Wallet</span>
+          <span class="nav-item">Users</span>
         </a></li>
         <li><a href="">
           <i class="fas fa-chart-bar"></i>
@@ -33,17 +30,17 @@
         </a></li>
         <li><a href="">
           <i class="fas fa-tasks"></i>
-          <span class="nav-item">Tasks</span>
+          <span class="nav-item">To Do</span>
         </a></li>
         <li><a href="">
           <i class="fas fa-cog"></i>
           <span class="nav-item">Settings</span>
         </a></li>
-        <li><a href="">
+        <li><a href="../help.php">
           <i class="fas fa-question-circle"></i>
-          <span class="nav-item">Help</span>
+          <span class="nav-item" href="help.php">Help</span>
         </a></li>
-        <li><a href="" class="logout">
+        <li><a href="../logout.php" class="logout">
           <i class="fas fa-sign-out-alt"></i>
           <span class="nav-item">Log out</span>
         </a></li>
@@ -58,17 +55,26 @@
       <div class="main-skills">
         <div class="card">
           <h3>users</h3>
-          <button>users</button>
+          <?php
+            $sql = "SELECT * FROM users";
+            $result = $conn->query($sql);
+            echo $result->num_rows;
+          ?>
         </div>
         <div class="card">
           <h3>products</h3>
+          <?php
+            $sql = "SELECT * FROM products";
+            $result = $conn->query($sql);
+            echo $result->num_rows;
+          ?>
         </div>
         <div class="card">
-          <h3>sales</h3>
+          <h3>Sales</h3>
         </div>
-        <!-- <div class="card">
-          <h3>IOS dev</h3>
-        </div> -->
+        <div class="card">
+          <h3>Suppliers</h3>
+        </div>
       </div>
 
       <section class="main-course">
@@ -81,18 +87,6 @@
             <li>finished</li>
           </ul>
           <div class="course">
-            <div class="box">
-              <h3>HTML</h3>
-              <p>80% - progress</p>
-              <button>continue</button>
-              <i class="fab fa-html5 html"></i>
-            </div>
-            <div class="box">
-              <h3>CSS</h3>
-              <p>50% - progress</p>
-              <button>continue</button>
-              <i class="fab fa-css3-alt css"></i>
-            </div>
             <div class="box">
               <h3>JavaScript</h3>
               <p>30% - progress</p>
