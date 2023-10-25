@@ -87,16 +87,34 @@
             <li>finished</li>
           </ul>
           <div class="course">
-            <div class="box">
-              <h3>JavaScript</h3>
-              <p>30% - progress</p>
-              <button>continue</button>
-              <i class="fab fa-js-square js"></i>
-            </div>
+            <table>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <?php
+                $sql = "SELECT id, name, username FROM users";
+                $result = $conn->query($sql);
+                
+                if ($result->num_rows > 0) {
+                  while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>". $row["id"]."</td><td>".$row["name"]."</td><td>".$row["username"]."</td><td><button>Edit</button></td><td><button>delete</button></td></tr>";
+                  }
+                } else {
+                  echo "0 results";
+                }
+                
+                $conn->close();
+              ?>
+              </table>
           </div>
         </div>
       </section>
     </section>
   </div>
 </body>
-</html></span>
+</html>
+
