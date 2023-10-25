@@ -8,6 +8,7 @@
         <h1>
             This is HOME page.
             hi i am milan
+            hi am rimzath
         </h1>
         <h1>products</h1>
         
