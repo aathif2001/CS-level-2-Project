@@ -28,14 +28,33 @@
                 margin: 60px;
             }
         </style>
+
+        
     </head>
     <body>
+        
+        <!-- search bar  -->
         <form action="products.php" method="post">
             <input type="text" name="search">
             <input type="submit" value="search">
         </form>
         
+        <script>
+            function editItem(product_id){
+                var url = 'edit.php?id='+ product_id
+                location.href= url;
+            } 
+            function deleteItem(product_id){
+                // location.href='delete.php';
+                var confirmation = window.confirm("Are you sure to delete this product ?");
+             }  
+            function addToCart(){
+                location.href='cart.php';
+            }
+        </script>
+
         <?php 
+            // search bar logic 
             if(isset($_POST['search'])){
                 $searchKey = $_POST['search'];
                 $sql = "SELECT product_id, product_name, price, in_stock FROM products WHERE product_name LIKE '%".$_POST['search']."%'";
@@ -55,13 +74,13 @@
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
                     echo "<button onclick='addToCart()'>Add to Cart</button>";
                     
-                    // Authorization - only admin could be edit or delete 
+                    // Authorization - only admin can edit or delete products 
                     if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
                         global $P_id;
-                        if (isset($row['product_id'])) $P_id = $row['product_id'];
+                        if (isset($row['product_id'])) {$P_id = $row['product_id'];}
                         echo $P_id;
                         echo "<button onclick=editItem(".$P_id.")>Edit</button>";
-                        echo "<button>Delete</button>";
+                        echo "<button onclick='deleteItem(2)'>Delete</button>";
                     }
                     echo "</div>";
                 }
@@ -70,18 +89,8 @@
             }
         ?>
 
-        <script>
-            function editItem(product_id){
-                var url = 'edit.php?id='+ product_id
-                location.href= url;
-            } 
-            function deleteItem(product_id){
-                location.href='delete.php';
-            }  
-            function addToCart(){
-                location.href='cart.php';
-            }
-        </script>
+        
+        
     </body>
 </html>
 
