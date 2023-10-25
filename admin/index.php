@@ -78,14 +78,8 @@
       </div>
 
       <section class="main-course">
-        <h1>Categories</h1>
+        <h1>&nbsp;Users</h1>
         <div class="course-box">
-          <ul>
-            <li class="active">In progress</li>
-            <li>explore</li>
-            <li>incoming</li>
-            <li>finished</li>
-          </ul>
           <div class="course">
             <table>
               <tr>
@@ -106,13 +100,43 @@
                 } else {
                   echo "0 results";
                 }
-                
-                $conn->close();
               ?>
               </table>
           </div>
         </div>
       </section>
+
+      <section class="main-course">
+        <h1>&nbsp;Add Products</h1>
+        <div class="course-box">
+          <div class="course">
+              
+            <form action="insert_product.php" method="post">
+              <table>
+                <tr>
+                  <td>Product Name :</td>
+                  <td><input type="text" name="product_name" required></td>
+                </tr>
+                <tr>
+                  <td>In Stock :</td>
+                  <td><input type="number" name="stock" required></td>
+                </tr>
+                <tr>
+                  <td>Cost :</td>
+                  <td><input type="number" name="cost" required></td>
+                </tr>
+                <tr>
+                  <td>Price :</td>
+                  <td><input type="number" name="price" required></td>
+                </tr>
+              </table>
+              <input type="submit" value="Add">
+            </form>
+              
+          </div>
+        </div>
+      </section>
+      
     </section>
   </div>
 </body>
