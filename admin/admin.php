@@ -8,7 +8,14 @@
     </style>
 </head>
 <body>
-    <?php include 'menu.php'; ?>
+    <?php include 'menu.php';?>
+    <script>
+
+        function AddItem(){
+                location.href='addItemform.php';
+            };
+
+    </script>
     <h1>Dashboard</h1>
 
     <div class="addProduct">
