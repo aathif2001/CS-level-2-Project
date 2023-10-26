@@ -21,16 +21,12 @@
           <span class="nav-item">Home</span>
         </a></li>
         <li><a href="">
-          <i class="fas fa-user"></i>
-          <span class="nav-item">Users</span>
-        </a></li>
-        <li><a href="">
           <i class="fas fa-chart-bar"></i>
           <span class="nav-item">Analytics</span>
         </a></li>
         <li><a href="">
           <i class="fas fa-tasks"></i>
-          <span class="nav-item">To Do</span>
+          <span class="nav-item">Products</span>
         </a></li>
         <li><a href="">
           <i class="fas fa-cog"></i>
@@ -53,21 +49,21 @@
         <i class="fas fa-user-cog"></i>
       </div>
       <div class="main-skills">
-        <div class="card">
+        <div class="card users">
           <h3>users</h3>
-          <?php
+          <h1><?php
             $sql = "SELECT * FROM users";
             $result = $conn->query($sql);
             echo $result->num_rows;
-          ?>
+          ?></h1>
         </div>
-        <div class="card">
+        <div class="card products">
           <h3>products</h3>
-          <?php
+          <h1><?php
             $sql = "SELECT * FROM products";
             $result = $conn->query($sql);
             echo $result->num_rows;
-          ?>
+          ?></h1>
         </div>
         <div class="card">
           <h3>Sales</h3>
@@ -130,10 +126,11 @@
                   <td><input type="number" name="price" required></td>
                 </tr>
               </table>
+              <input type="file" name="file">
               <input type="submit" value="Add">
             </form>
               
-          </div>
+            </div>
         </div>
       </section>
       

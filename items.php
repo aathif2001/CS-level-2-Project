@@ -40,20 +40,23 @@
         </form>
         
         <script>
-            function editItem(product_id){
-                var url = 'edit.php?id='+ product_id
-                location.href= url;
-            } 
-            function deleteItem(product_id){
-                // location.href='delete.php';
-                var confirmation = window.confirm("Are you sure to delete this product ?");
-             }  
-            function addToCart(){
-                location.href='cart.php';
-            }
+            
         </script>
 
         <?php 
+
+            function editItem($product_id){
+                $url = 'edit.php?id='. $product_id;
+                echo "<script>location.href='$url'</script>";
+            } 
+            // function deleteItem(product_id){
+            //     // location.href='delete.php';
+            //     var confirmation = window.confirm("Are you sure to delete this product ?");
+            // }  
+            // function addToCart(){
+            //     location.href='cart.php';
+            // }
+
             // search bar logic 
             if(isset($_POST['search'])){
                 $searchKey = $_POST['search'];
@@ -68,9 +71,7 @@
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
                     echo "<img src='' alt='item_img'><br>";
-                    // retrieve name from database 
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
-                    // retrieve price from database
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
                     echo "<button onclick='addToCart()'>Add to Cart</button>";
                     

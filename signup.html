@@ -6,101 +6,92 @@
 	    color:blue;
 	}
     body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
 	    color:black;
-            background-image:url("./images/electronic-gadgets.jpeg");
-            background-attachment:fixed;
-            background-size:cover;
-            background-repeat:no-repeat;
-        }
+        background-image:url("./images/electronic-gadgets.jpeg");
+        background-attachment:fixed;
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background:#fff;
+        border-radius: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top:50px;
+    }
+    form {
+        padding: 20px;
+    }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background:#fff;
-            border-radius: 25px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top:50px;
-           
-        }
-        form {
-            padding: 20px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-
-.block{
-    margin-left:80px;
-}
-.block input[type=submit]{
-   background-color:cyan;
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius:10px;
- 
-
-}
-.block input[type=reset]{
-  background-color: cyan;
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius:10px;
-  
-}
- 
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .block{
+        margin-left:80px;
+    }
+    .block input[type=submit]{
+        background-color:cyan;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius:10px;
+    }
+    .block input[type=reset]{
+        background-color: cyan;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius:10px;
+    }
 </style>
 </head>
 <body>
-<div class="container">
-<h1 style="text-align:center">Register From</h1>
-<from>
-<b>User Name:</b><input type="text" name="textbox name" placeholder="Full Name" size="length of the textbox"><br>
+    <div class="container">
+    <h1 style="text-align:center">Register From</h1>
+    <form>
+        <b>User Name : </b>
+        <input type="text" name="textbox name" placeholder="Full Name" required><br>
 
-<b>Email:</b><input type="email" name="Email" placeholder="Enter you Email" size="length of the textbox"><br>
+        <b>Email :</b>
+        <input type="email" name="Email" placeholder="Enter you Email" required><br>
 
-<b>Contact Number:</b><input type="text" name="Contact Number" placeholder="07xxxxxxxxx" size="length of the textbox"><br>
-
-
-<b>Password:</b><input type="password" name="password" size="20">
-
-<b>Confirm Password:</b><input type="password" name="password" size="20"><br>
-
-<br><br>
+        <b>Contact Number :</b>
+        <input type="text" name="Contact Number" placeholder="07xxxxxxxxx" required><br>
 
 
-<div class="block">
-<input type="submit" value="Register">       
-<input type="Reset" value="Cancel">
-</div>
-</div>
+        <b>Password :</b>
+        <input type="password" name="password" size="20" required>
 
+        <b>Confirm Password :</b>
+        <input type="password" name="re-password" size="20" required>
+        <br><br>
 
+        <div class="block">
+            <input type="submit" value="Register">       
+            <input type="Reset" value="Cancel">
+        </div>
+        </div>
 
-
-
-</from>
+    </form>
 </body>
 </html>
