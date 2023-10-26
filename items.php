@@ -81,7 +81,7 @@
                         </form>
 
                         <form action="./admin/edit_product.php" method="post">
-                        <input type="hidden" name="productid" value="<?php echo $P_id; ?>">
+                        <input type="hidden" name="productid1" value="<?php echo $P_id; ?>">
                         <button type="submit">EDIT</button>
                         </form>
 
