@@ -40,38 +40,45 @@
         </form>
         
         <script>
-            
+            function editItem(product_id){
+                var url = 'edit.php?id='+ product_id
+                location.href= url;
+            } 
+            function deleteItem(product_id){
+                // location.href='delete.php';
+                var confirmation = window.confirm("Are you sure to delete this product ?");
+             }  
+            function addToCart(){
+                location.href='cart.php';
+            }
+
+            function AddItem(){
+                location.href='addItemform.php';
+            }
         </script>
 
         <?php 
-
-            function editItem($product_id){
-                $url = 'edit.php?id='. $product_id;
-                echo "<script>location.href='$url'</script>";
-            } 
-            // function deleteItem(product_id){
-            //     // location.href='delete.php';
-            //     var confirmation = window.confirm("Are you sure to delete this product ?");
-            // }  
-            // function addToCart(){
-            //     location.href='cart.php';
-            // }
-
             // search bar logic 
             if(isset($_POST['search'])){
                 $searchKey = $_POST['search'];
                 $sql = "SELECT product_id, product_name, price, in_stock FROM products WHERE product_name LIKE '%".$searchKey."%'";
             } else {
-                $sql = "SELECT product_name, price, in_stock FROM products";
+                $sql = "SELECT product_name, price, in_stock, filepath FROM products";
             }
 
             $result = $conn->query($sql); 
 
+            if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
+                echo "<button onclick=AddItem()>Add Items</button>";
+            }
+
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
-                    echo "<img src='' alt='item_img'><br>";
+                    echo "<img src='./products/" .$row['filepath']. "' alt='item_img' height='250px' ><br>";
+                    // retrieve name from database 
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
+                    // retrieve price from database
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
                     echo "<button onclick='addToCart()'>Add to Cart</button>";
                     
