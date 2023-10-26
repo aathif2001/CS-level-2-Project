@@ -23,7 +23,11 @@
     VALUES ('$idnum','$product_name', '$stock', '$cost' , '$price', '$filename')";
 
     if ($conn->query($sql) === TRUE) {
-            echo "<script>alert('New Record created successfully');</script>";
+            echo "New Record created successfully";
+            header("Location: ./index.php");
+            // sleep(5);
+            // header("Location: ../products.php");
+
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
