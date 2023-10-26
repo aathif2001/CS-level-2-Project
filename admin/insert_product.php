@@ -6,26 +6,21 @@
     $stock = $_POST['stock'];
     $cost = $_POST['cost'];
     $price = $_POST['price'];
-    $filename = $_FILES["file"]["name"];
+    $filename = $_POST['picture'];
+    
 
     // SQL query to count total rows in a table
-    $sql1 = "SELECT COUNT(*) as total_rows FROM products";
+    $sql1 = "SELECT * FROM products ORDER BY product_id DESC LIMIT 1";
 
     // Execute the query
     $result = $conn->query($sql1);
 
     // Fetch the result and store it in a variable
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $totalRows = $row["total_rows"];
-    } else {
-        $totalRows = 0;
-    }
-
-    $totalRows = $totalRows + 1;
-
+    $row1 = $result->fetch_assoc();
+    $idnum = $row1["product_id"] + 1;
+ 
     $sql = "INSERT INTO products (product_id ,product_name, in_stock, price, cost, filepath)
-    VALUES ('$totalRows','$product_name', '$stock', '$cost' , '$price', '$filename')";
+    VALUES ('$idnum','$product_name', '$stock', '$cost' , '$price', '$filename')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";

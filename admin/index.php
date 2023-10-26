@@ -10,15 +10,6 @@
   </head>
 <body>
 
-  <!--
-      <script>
-          function getFileName() {
-          var fileInput = document.getElementById('fileInput');
-          var fileName = fileInput.value;
-          }
-      </script> 
-  -->
-
   <div class="container">
     <nav>
       <ul>
@@ -117,7 +108,7 @@
         <div class="course-box">
           <div class="course">
               
-            <form action="insert_product.php" method="post">
+            <form action="insert_product.php" method="post" enctype="multipart/form-data">
               <table>
                 <tr>
                   <td>Product Name :</td>
@@ -135,9 +126,12 @@
                   <td>Price :</td>
                   <td><input type="number" name="price" required></td>
                 </tr>
+                <tr>
+                  <td>Name of the picture :</td>
+                  <td><input type="text" name="picture" required></td>
+                </tr>
               </table>
-
-              <input type="file" name="file" id="fileInput">
+              <input type="submit" value="add">
               
             </form>
               
