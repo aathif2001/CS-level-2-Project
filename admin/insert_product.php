@@ -11,7 +11,7 @@
     VALUES ('$product_name', '$stock', '$cost' , '$price')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+            echo "<script>alert('New Record created successfully');</script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

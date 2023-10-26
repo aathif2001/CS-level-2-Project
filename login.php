@@ -13,13 +13,14 @@
         <form action="server.php" method="get">
             <label for="name"> Name : </label>
             <input type="text" name="name" placeholder="Enter Your Username" value=<?php if(isset($_COOKIE['username'])) echo $_COOKIE['username'] ?>>
-            <br>
+            <br><br>
             <label for="pwd" >Password :</label>
             <input type="password" name="pwd" placeholder="Enter Your Password"value=<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password'] ?>>
             <br>
-            <input type="checkbox" name="check" >Remember me 
-            
-            <input type="submit" value="Submit" class="btn-login" >
+            <input type="checkbox" name="check">Remember me 
+            <br>
+            <input type="submit" value="Log in" class="btn-login" ><br><br>
+            <a href="signup.php">Register</a>
         </form>
     </div>
 </body>

@@ -68,16 +68,19 @@
 <body>
     <div class="container">
     <h1 style="text-align:center">Register From</h1>
-    <form>
-        <b>User Name : </b>
-        <input type="text" name="textbox name" placeholder="Full Name" required><br>
+    
+    <form action="signup.php" method="post">
+        <b>Name : </b>
+        <input type="text" name="name" placeholder="Full Name" required><br>
+
+        <b>Username : </b>
+        <input type="text" name="username" placeholder="Username" required><br>
 
         <b>Email :</b>
-        <input type="email" name="Email" placeholder="Enter you Email" required><br>
+        <input type="email" name="email" placeholder="Enter you Email" required><br>
 
         <b>Contact Number :</b>
-        <input type="text" name="Contact Number" placeholder="07xxxxxxxxx" required><br>
-
+        <input type="text" name="contact" placeholder="07xxxxxxxxx" required><br>
 
         <b>Password :</b>
         <input type="password" name="password" size="20" required>
@@ -93,5 +96,38 @@
         </div>
 
     </form>
+
+    <?php
+        include 'conn.php';
+        
+        if(!isset($_POST['password']) || !isset($_POST['re-password'])){
+            return;
+        }
+
+        if ($_POST['password'] !== $_POST['re-password']){
+            echo "<script>alert('Password Mismatch');</script>";
+            echo "<script>location.href='signup.php'</script>";
+            retun;
+        }
+        
+        if(!isset($_POST['username']) || !isset($_POST['password'])){
+            return;
+        }
+        $name = $_POST['name'];
+        $username = $_POST['username'];
+        $contact = $_POST['contact'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $sql = "INSERT INTO users (name, username, password)
+        VALUES ('$name', '$username', '$password')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "<script>alert('New Record created successfully');</script>";
+            echo "<script>location.href='login.php'</script>";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    ?>
 </body>
 </html>
