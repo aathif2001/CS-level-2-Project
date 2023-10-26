@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   </head>
 <body>
+
+  <!--
+      <script>
+          function getFileName() {
+          var fileInput = document.getElementById('fileInput');
+          var fileName = fileInput.value;
+          }
+      </script> 
+  -->
+
   <div class="container">
     <nav>
       <ul>
@@ -126,8 +136,9 @@
                   <td><input type="number" name="price" required></td>
                 </tr>
               </table>
-              <input type="file" name="file">
-              <input type="submit" value="Add">
+
+              <input type="file" name="file" id="fileInput">
+              
             </form>
               
             </div>
