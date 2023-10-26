@@ -60,7 +60,7 @@
             // search bar logic 
             if(isset($_POST['search'])){
                 $searchKey = $_POST['search'];
-                $sql = "SELECT product_id, product_name, price, in_stock FROM products WHERE product_name LIKE '%".$_POST['search']."%'";
+                $sql = "SELECT product_id, product_name, price, in_stock FROM products WHERE product_name LIKE '%".$searchKey."%'";
             } else {
                 $sql = "SELECT product_name, price, in_stock FROM products";
             }

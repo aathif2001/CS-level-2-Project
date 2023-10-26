@@ -171,7 +171,7 @@
 
                     <a href="#" target="_blank">
                     <span class="price">3$</span>
-                    <img src="images/14.png" alt="">
+                    <img src="images/headphone.jpg" alt="">
                     <h3>Wireless Headphones</h3>
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>
@@ -184,7 +184,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">free</span>
-                    <img src="images/15.png" alt="">
+                    <img src="images/wiremouse.jpg" alt="">
                     <h3>WIRED MOUSE</h3>
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>  
@@ -196,7 +196,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">$5</span>
-                    <img src="images/16.png" alt="">
+                    <img src="images/wireless-mouse.jpg" alt="">
                     <h3>WIRELESS MOUSE</h3>
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>   
@@ -207,7 +207,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">$1</span>
-                    <img src="images/17.png" alt="">
+                    <img src="images/keyboard.jpg" alt="">
                     <h3>KEYBORD</h3>
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a> 
@@ -217,7 +217,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">$2</span>
-                    <img src="images/2.png" alt="">
+                    <img src="images/power.jpg" alt="">
                     <h3>POWESUPLIERS</h3>
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a> 
@@ -246,7 +246,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">New</span>
-                    <img src="images/2.png" alt="">
+                    <img src="images/n-tab.jpg" alt="">
                     <h3>Latest Tablet for You</h3>
                     </a>  
                     
@@ -257,7 +257,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">New</span>
-                    <img src="images/3.png" alt="">
+                    <img src="images/h-headphone.jpg" alt="">
                     <h3>High-Quality Headphones</h3>
                     </a>
                 </div>
@@ -268,7 +268,7 @@
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">New</span>
-                    <img src="images/4.png" alt="">
+                    <img src="images/n-phone.jpeg" alt="">
                     <h3>Next-Gen Smartphone</h3>
                     </a>
                 </div>
