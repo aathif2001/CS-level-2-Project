@@ -1,11 +1,6 @@
 <html>
 <head>
     <title>Dashboard</title>
-    <style>
-        .addProduct{
-
-        }
-    </style>
 </head>
 <body>
     <?php include 'menu.php';?>
