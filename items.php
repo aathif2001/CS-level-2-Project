@@ -45,8 +45,8 @@
                 location.href= url;
             } 
             function deleteItem(product_id){
-                // location.href='delete.php';
                 var confirmation = window.confirm("Are you sure to delete this product ?");
+                location.href='./admin/delete.php';
              }  
             function addToCart(){
                 location.href='cart.php';
@@ -61,7 +61,7 @@
                 $searchKey = $_POST['search'];
                 $sql = "SELECT product_id, product_name, price, in_stock FROM products WHERE product_name LIKE '%".$searchKey."%'";
             } else {
-                $sql = "SELECT product_name, price, in_stock, filepath FROM products";
+                $sql = "SELECT product_id, product_name, price, in_stock, filepath FROM products";
             }
 
             $result = $conn->query($sql); 
@@ -80,10 +80,22 @@
                     // Authorization - only admin can edit or delete products 
                     if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
                         global $P_id;
-                        if (isset($row['product_id'])) {$P_id = $row['product_id'];}
-                        echo $P_id;
-                        echo "<button onclick=editItem(".$P_id.")>Edit</button>";
-                        echo "<button onclick='deleteItem(2)'>Delete</button>";
+                        if (isset($row['product_id'])) {
+                            $P_id = $row['product_id'];
+                        }
+                        ?>
+
+                        <form action="./admin/delete.php" method="post">
+                        <input type="hidden" name="productid" value="<?php echo $P_id; ?>">
+                        <button type="submit">DELETE</button>
+                        </form>
+
+                        <form action="./admin/edit_product.php" method="post">
+                        <input type="hidden" name="productid" value="<?php echo $P_id; ?>">
+                        <button type="submit">EDIT</button>
+                        </form>
+
+                        <?php
                     }
                     echo "</div>";
                 }
