@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 26, 2023 at 04:55 PM
+-- Generation Time: Oct 26, 2023 at 07:05 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -45,7 +45,9 @@ CREATE TABLE IF NOT EXISTS `products` (
 INSERT INTO `products` (`product_id`, `product_name`, `in_stock`, `price`, `cost`, `filepath`) VALUES
 (1, 'latitude 5400', 3, 78000, 58000, 'Latitude5400.jpg'),
 (2, 'latitude 5420', 5, 138000, 110000, 'latitude5420.jpg'),
-(3, 'Asus TUF F 15', 2, 168000, 149000, 'ASUSTUFF15.png');
+(3, 'Asus TUF F 15', 2, 168000, 149000, 'ASUSTUFF15.png'),
+(4, 'ASUS TUF A 16', 12, 52000, 60000, 'Asus-TUF-A16-gaming-laptop-review.jpg'),
+(5, 'Mac Book 2016', 12, 100000, 111000, 'macbook2016.jpg');
 
 -- --------------------------------------------------------
 

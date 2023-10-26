@@ -52,9 +52,7 @@
                 location.href='cart.php';
             }
 
-            function AddItem(){
-                location.href='addItemform.php';
-            }
+        
         </script>
 
         <?php 
@@ -68,9 +66,6 @@
 
             $result = $conn->query($sql); 
 
-            if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
-                echo "<button onclick=AddItem()>Add Items</button>";
-            }
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
@@ -102,11 +97,3 @@
     </body>
 </html>
 
-<!-- <div class="card">
-            <img src="#" alt="item_img"><br>
-            <span id="item_name"></span>
-            <span id="item_name"></span>
-            <button>Add to Cart</button>
-            <button>edit</button>
-            <button>delete</button>
-        </div> -->
