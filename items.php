@@ -40,19 +40,9 @@
         </form>
         
         <script>
-            function editItem(product_id){
-                var url = 'edit.php?id='+ product_id
-                location.href= url;
-            } 
-            function deleteItem(product_id){
-                var confirmation = window.confirm("Are you sure to delete this product ?");
-                location.href='./admin/delete.php';
-             }  
             function addToCart(){
                 location.href='cart.php';
             }
-
-        
         </script>
 
         <?php 
