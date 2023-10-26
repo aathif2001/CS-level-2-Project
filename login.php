@@ -14,7 +14,7 @@
             <label for="name"> Name : </label>
             <input type="text" name="name" placeholder="Enter Your Username" value=<?php if(isset($_COOKIE['username'])) echo $_COOKIE['username'] ?>>
             <br>
-            <label for="pwd" >Password : </label>
+            <label for="pwd" >Password :</label>
             <input type="password" name="pwd" placeholder="Enter Your Password"value=<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password'] ?>>
             <br>
             <input type="checkbox" name="check" >Remember me 
