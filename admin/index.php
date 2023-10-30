@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <style>
+      .delete{
+                padding: 6px;
+                font-weight:bold;
+                font-size:14px;
+                color:white;
+                border:none;
+                background-color:red;
+                border-radius:5px;
+                cursor:pointer;
+            }
+    </style>
   </head>
 <body>
 
@@ -84,7 +96,7 @@
                 
                 if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>". $row["id"]."</td><td>".$row["name"]."</td><td>".$row["username"]."</td><td><button>Edit</button></td><td><button>delete</button></td></tr>";
+                    echo "<tr><td>". $row["id"]."</td><td>".$row["name"]."</td><td>".$row["username"]."</td><td><button class='delete'>delete</button></td></tr>";
                   }
                 } else {
                   echo "0 results";
@@ -122,8 +134,12 @@
                   <td>Name of the picture :</td>
                   <td><input type="text" name="picture" required></td>
                 </tr>
+                <tr>
+                  <td></td>
+                  <td><input type="submit" value="add"></td>
+                </tr>
               </table>
-              <input type="submit" value="add">
+              
               
             </form>
               
