@@ -1,13 +1,12 @@
 <?php include 'menu.php' ?>  
 <html>
     <head>
-        <link rel="stylesheet" href="css/main.css">
-       <style type="text/css">
+        <style type="text/css">
             body{
              margin: 0;
              }
     
-             .help{
+            .help{
                 width: 100vw;
                 height: 100vh;
                 display: flex;
@@ -32,25 +31,23 @@
             justify-content:center;
             }
             .helpbox{
-            width: 30vw;
+            padding: 18px;
+            width: 28vw;
             height: 15vw;
             margin: 1vw;
             border: #000000 solid 0.2vw;
             box-shadow: 10px 10px 5px;
             position: relative;
             left:3vw;
-            
             background-color:#8DB6C6;
             border-radius:1vw;
-      
-
             }
         </style>
 </head>
 <body style="background-color:#B0D2DE;">
 
     <div class="topic">
-    <h1> Help Center</h1>
+    <h1 style="margin: 30px">Help Center</h1>
     </div>
     <div class="help">
         <div class="helpl">
@@ -59,7 +56,6 @@
                 <p>If you have any issues regarding payment and </br>
                    Account related issues,</br>
                    IT department-033 2456789</p>
-                
             </div>
             <div class="helpbox">
                 <h2>App issues</h2>
