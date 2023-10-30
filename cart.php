@@ -2,9 +2,11 @@
 <head>
     <title>Cart</title>
     <style>
+        body{
+            margin: 0; 
+        }
         table {
-        margin-top: 15px;
-        width: 100%;
+            width: 100%;
         }
         table tr:nth-child(even) {
         background-color: #f2f2f2;
@@ -17,7 +19,8 @@
 </head>
 
 <body>
-    <h1>Cart</h1>
+    <?php include 'menu.php'; ?>
+    <h1 style="margin: 30px">Cart</h1>
     
     <table>
         <tr>

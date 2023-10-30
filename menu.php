@@ -3,6 +3,9 @@
 <html>
     <head>
         <style>
+            .header {
+                margin:0;
+            }
             .menu {
                     text-align: center;
                     margin: auto;
@@ -57,7 +60,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     </head>
     <body>
-    <ul>
+    <ul class="header">
     <?php
         if (isset($_SESSION['username'])){
             // currently logged in 
