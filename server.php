@@ -14,52 +14,45 @@
 
             include("conn.php");
             
-            $sql = "SELECT id, name, username, password, user_type FROM users";
-            $result = $conn->query($sql); 
-            
-            session_start();
-            
             // retrieve data from login form input fields
             $formUsername = $_GET['name'];
             $formPassword = $_GET['pwd'];
 
+            $sql = "SELECT name, username, password, user_type FROM users WHERE username='$formUsername' and password='$formPassword'";
+            $result = $conn->query($sql); 
+            
+            session_start();
+            
             if (isset($_SESSION['username'])){
                     // $name = isset($_SESSION['name']) ? $_SESSION['name'] : $_SESSION['username'];
                     echo "Welcome ".$_SESSION['name'];
+                    return;
             } else {
-                while($row = $result->fetch_assoc()) {
-                    if ($row['username'] == $formUsername && $row['password'] == $formPassword){
-                        // store user details in a session
-                        $_SESSION['username'] = $formUsername;
-                        $_SESSION['name'] = $row['name'];
-                        $_SESSION['usertype'] = $row['user_type'];
+                $row = $result->fetch_assoc();
+                
+                // if username and password didn't match
+                if($row == null){
+                    echo "<script>alert('Incorrect Details');</script>";
+                    echo "<script>location.href='products.php'</script>";
+                    return;
+                }
+                // store user details in a session
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['name'] = $row['name'];
+                $_SESSION['usertype'] = $row['user_type'];
 
-                        // if checkbox checked save username and password in cookies
-                        if(isset($_GET["check"])){
-                            setCookie('username', $formUsername);
-                            setCookie('password', $formPassword);
-                        }
-
-                        echo "<script>location.href='products.php'</script>";
-                        return;
-                    }
+                // if checkbox checked save username and password in cookies
+                if(isset($_GET["check"])){
+                    setCookie('username', $formUsername);
+                    setCookie('password', $formPassword);
                 }
 
-                // if username and password didn't match
-                echo "Incorrect details<br>";
-                echo "<a href='login.php'>login</a>";
+                echo "<script>location.href='products.php'</script>";
+                return;
+
             }
 
-            
-
-     
         ?>
-
-        <div class="menu">
-            <a href="home.php">Home</a><br>
-            <a href="products.php">Products</a><br>
-            <a href="logout.php">logout</a>
-        </div>
 
     </body>
 </html>
