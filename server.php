@@ -24,8 +24,8 @@
             session_start();
             
             if (isset($_SESSION['username'])){
-                    // $name = isset($_SESSION['name']) ? $_SESSION['name'] : $_SESSION['username'];
-                    echo "Welcome ".$_SESSION['name'];
+                    echo "<script>alert('You are already logged in.')</script>";
+                    echo "<script>location.href='products.php'</script>";
                     return;
             } else {
                 $row = $result->fetch_assoc();
