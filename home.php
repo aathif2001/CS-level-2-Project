@@ -10,56 +10,19 @@
         <link rel="stylesheet" href="css/home.css">
     </head>
     <body style="background-color: rgb(218, 192, 163)">
-        <!-- header section strat-->
+
+    <?php include 'menu.php' ?>       
 
         <header style="background-color: rgb(15, 44, 89)">
             <div >
-            <a href="#"><img src="images/logo3.jpg" alt="logo_img" height="50" width="50"></a>
+                <a href="#"><img src="images/logo3.jpg" alt="logo_img" height="50" width="50"></a>
             </div>  
              
-            <?php include 'menu.php' ?>       
-            <!-- <nav class="navbar">                
-                <a href="#">HOME</a>
-                <a href="#">PRODUCTS</a>
-                <a href="#">ADD TO CART</a>
-                <a href="help.html">CONTACT US</a>
-             
-            </nav> -->
-            
-            <div class="icons">
-                <i class="fas fa-search" id="search-icon" onclick="toggleSearchBar()"></i>
-                <a href="teacher_Profile_form.php"><i class="fa fa-fw fa-user" style="font-size: 1.4rem;"></i></a> 
-                <!-- <div class="profile">                    
-                </div>-->
-                <i class="fas fa-bars" id="menu-bars"></i>  
-              </div>
-              
-              <div id="search-bar-container" style="border: 1px ">
-                <input type="text" id="search-bar" placeholder="Search..." style="width: 200px; height: 30px; border: 1px solid gray; border-radius: 5px; padding: 5px;">
-              </div>
-              
-              <script>
-                function toggleSearchBar() {
-                  let searchBarContainer = document.getElementById("search-bar-container");
-                  searchBarContainer.style.display = (searchBarContainer.style.display === "none") ? "block" : "none";
-                }
-              </script>
-                      
 
             <div class="button">   
-            <a href="#.php" class="btn1">Sign Out</a>
+                <a href="#.php" class="btn1">Sign Out</a>
             </div>
-
-            <form action="" id="search-form">
-                <input type="search" placeholder="search here..." name="" id="search-box">
-                <label for="search-box" class="fas fa-search"></label>
-                <i class="fas fa-times" id="close"></i>
-            </form>
-
-            
-
         </header>
-        <!-- heaer section end -->
         
         <section class="home" id="home" style="background-color: rgb(218, 192, 163)">
             <div class="content">
