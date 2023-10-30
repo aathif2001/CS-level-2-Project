@@ -1,6 +1,11 @@
 <html>
     <head>
         <title>Products</title>
+        <style>
+            body {
+                margin: 0
+            }
+        </style>    
     </head>
     <body>
         

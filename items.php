@@ -24,7 +24,7 @@
             }
             form {
                 text-align:left;
-                margin: 1px;
+                margin: 10px;
             }
             #result {
                 font-size: 20px;
@@ -39,6 +39,7 @@
                 background-color:rgb(24, 124, 76);
                 border:none;
                 border-radius:5px;
+                padding: 6px;
                 cursor:pointer;
             }
             .cart{
@@ -50,9 +51,10 @@
                 align:center;
                 border-radius:5px;
                 cursor:pointer;
-
+                padding: 6px;
             }
             .delete{
+                padding: 6px;
                 font-weight:bold;
                 font-size:14px;
                 color:white;
@@ -60,7 +62,6 @@
                 background-color:red;
                 border-radius:5px;
                 cursor:pointer;
-
             }
             input[type=submit] {
             background-color: #4CAF50;
@@ -114,7 +115,7 @@
                  
                         <form action="./cart.php" method="post">
                             <input type="hidden" name="productid" value="<?php echo $row['product_id'] ?>">
-                            <button type="submit">ADD TO CART</button>
+                            <button class='cart' type="submit">ADD TO CART</button>
                         </form>
 
                 <?php
@@ -133,7 +134,7 @@
 
                         <form action="./admin/edit_product.php" method="post">
                         <input type="hidden" name="productid1" value="<?php echo $P_id; ?>">
-                        <button type="submit">EDIT</button>
+                        <button type="submit" class='edit'>EDIT</button>
                         </form>
                         <?php
                     }
