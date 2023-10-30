@@ -26,15 +26,15 @@
             <br>
             <input type="hidden" name='productid' value=<?php echo $productid; ?>>
             <label for="productname">Product Name :</label>
-            <input type="text" name='productname' required> <br>
+            <input type="text" name='productname' value='<?php echo $row1['product_name'] ?>' required> <br>
             <label for="price">Price :</label>
-            <input type="number" name='price' required> <br>
+            <input type="number" name='price' value='<?php echo $row1['price'] ?>' required> <br>
             <label for="cost">Cost :</label>
-            <input type="number" name='cost' required> <br>
+            <input type="number" name='cost' value='<?php echo $row1['cost'] ?>' required> <br>
             <label for="instock">In Stock :</label>
-            <input type="number" name='instock' required> <br>
+            <input type="number" name='instock' value='<?php echo $row1['in_stock'] ?>' required> <br>
             <label for="filepath">Filename :</label>
-            <input type="text" name='filepath' required> <br>
+            <input type="text" name='filepath' value='<?php echo $row1['filepath'] ?>' required> <br>
             <input type="submit" value="Confirm Edit">
         </form>
     </body>

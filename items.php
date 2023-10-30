@@ -38,11 +38,8 @@
                 color:white;
                 background-color:rgb(24, 124, 76);
                 border:none;
-                
                 border-radius:5px;
                 cursor:pointer;
-
-                
             }
             .cart{
                 font-weight:bold;
@@ -84,10 +81,7 @@
             border-radius: 4px;
             box-sizing: border-box;
             }
-
         </style>
-
-        
     </head>
     <body style="background-color:#B0D2DE;">
         
@@ -116,22 +110,21 @@
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
                     // retrieve price from database
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
-              ?>
+                ?>
                  
-                    <div class="buttons">
                         <form action="./cart.php" method="post">
                             <input type="hidden" name="productid" value="<?php echo $row['product_id'] ?>">
-                            <button type="submit">Add to Cart</button>
+                            <button type="submit">ADD TO CART</button>
                         </form>
 
-                    <?php
+                <?php
                     // Authorization - only admin can edit or delete products 
                     if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
                         global $P_id;
                         if (isset($row['product_id'])) {
                             $P_id = $row['product_id'];
                         }
-                    ?>
+                ?>
 
                         <form action="./admin/delete.php" method="post">
                         <input type="hidden" name="productid" value="<?php echo $P_id; ?>">
@@ -142,16 +135,15 @@
                         <input type="hidden" name="productid1" value="<?php echo $P_id; ?>">
                         <button type="submit">EDIT</button>
                         </form>
-                    </div>
-                <?php
+                        <?php
                     }
                     echo "</div>";
                 }
             } else {
                 echo "<p id='result'>0 results<p>";
             }
-        ?>
-             
-    </body>
+            ?>
+            
+            </body>
 </html>
 
