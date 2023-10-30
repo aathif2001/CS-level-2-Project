@@ -73,7 +73,7 @@
         <li><a href="products.php">Products</a></li>
         <li><?php
                 if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
-                    echo "<li><a href='./admin'>Admin Dashboard</a></li>";
+                    echo "<li><a href='./admin'>Dashboard</a></li>";
                 }
             ?></li>
         <li><a href="home.php">Home</a></li>

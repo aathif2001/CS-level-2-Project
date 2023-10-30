@@ -66,6 +66,11 @@
 </style>
 </head>
 <body>
+    <script>
+        function back() {
+            location.href="home.php";
+        }
+    </script>
     <div class="container">
     <h1 style="text-align:center">Register From</h1>
     
@@ -91,7 +96,7 @@
 
         <div class="block">
             <input type="submit" value="Register">       
-            <input type="Reset" value="Cancel">
+            <input type="Reset" value="Cancel" onclick="back()">
         </div>
         </div>
 
@@ -124,7 +129,7 @@
 
         if ($conn->query($sql) === TRUE) {
             echo "<script>alert('New Record created successfully');</script>";
-            echo "<script>location.href='login.php'</script>";
+            echo "<script>location.href='home.php'</script>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
