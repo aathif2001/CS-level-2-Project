@@ -17,10 +17,7 @@
                 overflow: hidden;
                 background-color: #2C2A29;
                 height:75px;
-                
-                
-                
-                }
+            }
 
             li {
                 float: right;
@@ -57,23 +54,26 @@
 
             }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     </head>
     <body>
     <ul>
-        <li><a href="logout.php">
-            <?php
-                if (isset($_SESSION['username'])){
-                    echo "Log out";   // currently logged in
-                } else {
-                    echo "Log out";   // currently logged out
-                }
-            ?>
-        </a></li>
+    <?php
+        if (isset($_SESSION['username'])){
+            // currently logged in 
+            echo "<li><a href='profile.php'><i class='fas fa-user-cog'></i></a></li>";
+        } else {
+            // currently logged out
+            echo "<li><a href='login.php'>Log in</a></li>";   
+        }
+    ?>
+        
+        <li><a href="cart.php">Cart</a></li>
         <li><a href="help.php">Help</a></li>
         <li><a href="products.php">Products</a></li>
         <li><?php
                 if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
-                    echo "<li><a href='./admin'>Dashboard</a></li>";
+                    echo "<li><a href='./admin'>Admin Dashboard</a></li>";
                 }
             ?></li>
         <li><a href="home.php">Home</a></li>
