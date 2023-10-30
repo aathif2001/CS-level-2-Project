@@ -5,9 +5,22 @@
             div {
                 text-align: center;
             }
+
+            button {
+                padding: 10px;
+                border: none;
+                background-color: lightblue;
+                border-radius: 5px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
+        <script>
+            function logout(){
+                location.href='logout.php'
+            }
+        </script>
         <div>
 
         <?php
@@ -18,8 +31,13 @@
             }
             echo "<h1>".$_SESSION['username']."</h1>";
             echo "<h3>Username : ".$_SESSION['name']."</h3>";
-            echo "<p>User Type : ".$_SESSION['usertype']."</p><hr>";
+            echo "<p>User Type : ".$_SESSION['usertype']."</p>";
+        ?>
 
+        <button onclick="logout()">Log Out</button>
+        <hr>
+
+        <?php
             echo "<p>Email Address : </p>";
             echo "<p>Contact Number : </p>";
         
