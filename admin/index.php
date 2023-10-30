@@ -21,17 +21,9 @@
           <i class="fas fa-home"></i>
           <span class="nav-item">Home</span>
         </a></li>
-        <li><a href="">
-          <i class="fas fa-chart-bar"></i>
-          <span class="nav-item">Analytics</span>
-        </a></li>
-        <li><a href="">
+        <li><a href="../products.php">
           <i class="fas fa-tasks"></i>
           <span class="nav-item">Products</span>
-        </a></li>
-        <li><a href="">
-          <i class="fas fa-cog"></i>
-          <span class="nav-item">Settings</span>
         </a></li>
         <li><a href="../help.php">
           <i class="fas fa-question-circle"></i>
@@ -47,7 +39,7 @@
     <section class="main">
       <div class="main-top">
         <h1>Admin Dashboard</h1>
-        <i class="fas fa-user-cog"></i>
+          <i class="fas fa-user-cog"></i>
       </div>
       <div class="main-skills">
         <div class="card users">
