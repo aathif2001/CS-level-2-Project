@@ -17,6 +17,7 @@
         background-repeat:no-repeat;
     }
     .container {
+        opacity: 0.95;
         max-width: 400px;
         margin: 0 auto;
         padding: 20px;

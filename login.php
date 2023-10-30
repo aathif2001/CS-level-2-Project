@@ -9,7 +9,7 @@
         }
     </style>    
 </head>
-<body background="images/login1.jpg">
+<body background="images/login1.jpg" style="opacity:0.95">
 <img src="images/logo3.jpg" alt="logo" class="login-logo">
     <div class="login-form ">
         <h1 >LOGIN</h1>

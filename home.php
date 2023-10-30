@@ -14,19 +14,6 @@
 
     <?php include 'menu.php' ?>       
 
-       <!-- <header style="background-color: rgb(15, 44, 89)">
-
-            <div >
-                <a href="#"><img src="images/logo3.jpg" alt="logo_img" height="50" width="50"></a>
-            </div>  
-             
-
-            <div class="button">   
-                <a href="#.php" class="btn1">Sign Out</a>
-            </div>
-
-        </header> -->
-        
         <section class="home" id="home" style="background-color:#B0D2DE">
 
             <div class="content">
