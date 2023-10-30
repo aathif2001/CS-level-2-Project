@@ -14,8 +14,8 @@
     <nav>
       <ul>
         <li><a href="../home.php" class="logo">
-          <img src="../images/logo1.jpg" alt="">
-          <span class="nav-item">E-store</span>
+         
+        <span class="nav-item">Laptoplk</span>
         </a></li>
         <li><a href="../home.php">
           <i class="fas fa-home"></i>
@@ -39,7 +39,7 @@
     <section class="main">
       <div class="main-top">
         <h1>Admin Dashboard</h1>
-          <i class="fas fa-user-cog"></i>
+        <i class="fas fa-user-cog"></i>
       </div>
       <div class="main-skills">
         <div class="card users">

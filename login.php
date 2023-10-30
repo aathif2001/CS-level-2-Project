@@ -3,7 +3,11 @@
 <head>
     <title>Log in</title>
     <link rel="stylesheet" href="css/login.css">
-    
+    <style>
+        .login-form{
+            background-color:white;
+        }
+    </style>    
 </head>
 <body background="images/login1.jpg">
 <img src="images/logo3.jpg" alt="logo" class="login-logo">
