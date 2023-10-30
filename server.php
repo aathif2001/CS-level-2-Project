@@ -26,9 +26,16 @@
             if (isset($_SESSION['username'])){
                     // $name = isset($_SESSION['name']) ? $_SESSION['name'] : $_SESSION['username'];
                     echo "Welcome ".$_SESSION['name'];
+                    return;
             } else {
                 $row = $result->fetch_assoc();
-
+                
+                // if username and password didn't match
+                if($row == null){
+                    echo "<script>alert('Incorrect Details');</script>";
+                    echo "<script>location.href='products.php'</script>";
+                    return;
+                }
                 // store user details in a session
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['name'] = $row['name'];
@@ -40,22 +47,12 @@
                     setCookie('password', $formPassword);
                 }
 
-                // echo "<script>location.href='products.php'</script>";
+                echo "<script>location.href='products.php'</script>";
                 return;
 
             }
 
-                // if username and password didn't match
-            echo "Incorrect details<br>";
-            echo "<a href='login.php'>login</a>";
-     
         ?>
-
-        <div class="menu">
-            <a href="home.php">Home</a><br>
-            <a href="products.php">Products</a><br>
-            <a href="logout.php">logout</a>
-        </div>
 
     </body>
 </html>
