@@ -7,8 +7,7 @@
         .login-form{
             background-color:white;
         }
-    </style>
-    
+    </style>    
 </head>
 <body background="images/login1.jpg">
 <img src="images/logo3.jpg" alt="logo" class="login-logo">

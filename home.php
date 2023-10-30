@@ -9,11 +9,13 @@
         <!-- coutom css file -->
         <link rel="stylesheet" href="css/home.css">
     </head>
+   
     <body style="background-color:#B0D2DE">
 
     <?php include 'menu.php' ?>       
 
        <!-- <header style="background-color: rgb(15, 44, 89)">
+
             <div >
                 <a href="#"><img src="images/logo3.jpg" alt="logo_img" height="50" width="50"></a>
             </div>  
@@ -22,9 +24,11 @@
             <div class="button">   
                 <a href="#.php" class="btn1">Sign Out</a>
             </div>
+
         </header> -->
         
         <section class="home" id="home" style="background-color:#B0D2DE">
+
             <div class="content">
                 <h3>Discover the Latest Electronics Products</h3>
                 <p style="color: black;">Explore our wide range of cutting-edge electronics and gadgets for your tech needs.</p>
@@ -40,7 +44,9 @@
         
 
         <!-- section 1 start -->
+
         <section class="activity" id ="activity" style="background-color:#B0D2DE">
+
 
             <h1 class="heading" style="color: black;"> Explore Our Product Categories</h1>
             <br>
@@ -110,15 +116,11 @@
             <p style="color: black;">Explore a world of high-quality electronic products to enhance your digital lifestyle. From cutting-edge smartphones to reliable keyboards and mice, we have everything you need for work.</p>
         </div>
         
-        <!-- section 1 end -->
         <!--  popular products section 1 starts -->
         <section class="popular" id="popular" style="background-color:#B0D2DE">
-           
-
             <h1 class="heading"> <span>Popular</span> PRODUCTS</h1>
 
             <div class="box-container">
-
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">200$</span>
@@ -127,23 +129,16 @@
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>   
                 </div>
-                
-
 
                 <div class="box">
-
                     <a href="#" target="_blank">
                     <span class="price">3$</span>
                     <img src="images/headphone.jpg" alt="">
                     <h3>Wireless Headphones</h3>
                     </a>
-                    <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>
-                      
-                    
+                    <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>                    
                 </div>
                  
-
-
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">free</span>
@@ -152,10 +147,7 @@
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>  
                 </div>
-                 
-            
-            
-         
+                          
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">$5</span>
@@ -164,9 +156,7 @@
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a>   
                 </div>
-                
-                
-                
+                 
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">$1</span>
@@ -175,7 +165,6 @@
                     </a>
                     <a href="#" class="btn"><i class="fa fa-gamepad" ></i> buy now</a> 
                 </div>
-                 
                 
                 <div class="box">
                     <a href="#" target="_blank">
@@ -201,21 +190,15 @@
                     <img src="images/t-lap.jpg" alt="">
                     <h3>Latest Model Laptop</h3>
                     </a>
-                  
                 </div>
                 
-
-
-                <div class="box">
+               <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">New</span>
                     <img src="images/n-tab.jpg" alt="">
                     <h3>Latest Tablet for You</h3>
                     </a>  
-                    
                 </div>
-                 
-
 
                 <div class="box">
                     <a href="#" target="_blank">
@@ -224,10 +207,7 @@
                     <h3>High-Quality Headphones</h3>
                     </a>
                 </div>
-                 
-            
-            
-         
+                   
                 <div class="box">
                     <a href="#" target="_blank">
                     <span class="price">New</span>
@@ -236,8 +216,6 @@
                     </a>
                 </div>
                 
-
-
         </section>
         <!-- new section ends -->
 
@@ -300,11 +278,9 @@
                 <div class="row">
                     <div class="footer-col">
                         <h4>Browse by Product Category</h4>
-                        
                     </div>
                     <div class="footer-col">
                         <h4>About Us</h4>
-                        
                     </div>
     
                     <div class="footer-col">
@@ -327,6 +303,7 @@
                 </div>
             </div>
         </footer>
+
         <div class="end-text" style="background-color:#B0D2DE">
             <p>&copy; 2023. All Rights Reserved. Designed By 37th CS 2001 group.</p>
         </div>

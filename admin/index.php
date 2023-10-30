@@ -14,24 +14,16 @@
     <nav>
       <ul>
         <li><a href="../home.php" class="logo">
-          
-          <span class="nav-item">Laptoplk</span>
+         
+        <span class="nav-item">Laptoplk</span>
         </a></li>
         <li><a href="../home.php">
           <i class="fas fa-home"></i>
           <span class="nav-item">Home</span>
         </a></li>
-        <li><a href="">
-          <i class="fas fa-chart-bar"></i>
-          <span class="nav-item">Analytics</span>
-        </a></li>
         <li><a href="../products.php">
           <i class="fas fa-tasks"></i>
           <span class="nav-item">Products</span>
-        </a></li>
-        <li><a href="">
-          <i class="fas fa-cog"></i>
-          <span class="nav-item">Settings</span>
         </a></li>
         <li><a href="../help.php">
           <i class="fas fa-question-circle"></i>
