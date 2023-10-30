@@ -27,6 +27,9 @@
                 text-align:center;
                 margin: 60px;
             }
+            .buttons {
+                display: inline;
+            }
         </style>
 
         
@@ -39,12 +42,6 @@
             <input type="submit" value="search">
         </form>
         
-        <script>
-            function addToCart(){
-                location.href='cart.php';
-            }
-        </script>
-
         <?php 
             // search bar logic 
             if(isset($_POST['search'])){
@@ -60,20 +57,27 @@
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
-                    echo "<img src='./products/" .$row['filepath']. "' alt='item_img' height='250px' ><br>";
+                    echo "<img src='./products/" .$row['filepath']. "' alt='item_img' height='250px' ><br><br>";
                     // retrieve name from database 
                     echo "<span id='item_name'>".$row['product_name']."</span><br>";
                     // retrieve price from database
                     echo "<span id='item_price'>LKR ".$row['price']."</span><br>";
-                    echo "<button onclick='addToCart()'>Add to Cart</button>";
+                    ?>
                     
+                    <div class="buttons">
+                        <form action="./cart.php" method="post">
+                            <input type="hidden" name="productid" value="<?php echo $row['product_id'] ?>">
+                            <button type="submit">Add to Cart</button>
+                        </form>
+
+                    <?php
                     // Authorization - only admin can edit or delete products 
                     if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "admin"){
                         global $P_id;
                         if (isset($row['product_id'])) {
                             $P_id = $row['product_id'];
                         }
-                        ?>
+                    ?>
 
                         <form action="./admin/delete.php" method="post">
                         <input type="hidden" name="productid" value="<?php echo $P_id; ?>">
@@ -84,10 +88,11 @@
                         <input type="hidden" name="productid1" value="<?php echo $P_id; ?>">
                         <button type="submit">EDIT</button>
                         </form>
+                    </div>
 
-                        <?php
+                <?php
                     }
-                    echo "</div>";
+                    echo "</div></div>";
                 }
             } else {
                 echo "<p id='result'>0 results<p>";
