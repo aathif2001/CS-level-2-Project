@@ -29,8 +29,8 @@
             if (!isset($_SESSION['username'])) {
                 return;
             }
-            echo "<h1>".$_SESSION['username']."</h1>";
-            echo "<h3>Username : ".$_SESSION['name']."</h3>";
+            echo "<h1>".$_SESSION['name']."</h1>";
+            echo "<h3>Username : ".$_SESSION['username']."</h3>";
             echo "<p>User Type : ".$_SESSION['usertype']."</p>";
         ?>
 
