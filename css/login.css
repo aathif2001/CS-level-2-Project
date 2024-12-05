@@ -1,0 +1,73 @@
+/** LOGIN PAGE CSS**/
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+.support-wrapper h1{
+    margin-bottom: 20px;
+}
+
+.login-form input[type=text],
+input[type=password] {
+    width: 100%;
+    margin: 28px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 15px;
+    color:navy
+}
+
+.btn-login {
+    border: 0;
+    width: 100px;
+    height: 40px;
+    background-color: navy;
+    color:white;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: transform .3s;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.btn-login:hover {
+    background-color: navy;
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+
+.login-form {
+    border: 1px solid grey;
+    width: 30%;
+    padding: 30px;
+    margin: 10px auto;
+    border-radius: 10px;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-logo {
+    margin-left: 70%;
+}
+
+.login-form .h1{
+    color: navy;
+
+}
+h1 {
+    font-size: 36px;
+    color: navy;
+    text-align: center; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    
+  }
+
+
+
+
